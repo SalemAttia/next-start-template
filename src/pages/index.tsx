@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Meta from '../components/layout/meta'
 
 export const Home = (): JSX.Element => (
   <div className="container">
@@ -6,6 +7,7 @@ export const Home = (): JSX.Element => (
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <Meta />
 
     <main>
       <h1 className="title">
