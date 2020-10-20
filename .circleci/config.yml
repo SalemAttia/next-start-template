@@ -19,8 +19,12 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
   test:
-   steps:
-     - run: npm run test-all
+    docker:
+      - image: circleci/node:12.9.1-browsers
+
+    working_directory: ~/repo
+    steps:
+      - run: npm run test-all
 
 workflows:
   version: 2
