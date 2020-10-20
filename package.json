@@ -26,9 +26,16 @@
     ]
   },
   "dependencies": {
+    "@sentry/browser": "^5.26.0",
+    "@sentry/integrations": "^5.26.0",
+    "@sentry/node": "^5.26.0",
+    "@sentry/webpack-plugin": "^1.13.0",
+    "@zeit/next-source-maps": "0.0.4-canary.1",
+    "axios": "^0.20.0",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "swr": "^0.3.6"
   },
   "devDependencies": {
     "@testing-library/react": "^10.0.1",
