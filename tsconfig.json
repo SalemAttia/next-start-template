@@ -19,7 +19,7 @@
       "@/lib/*": ["src/lib/*"],
       "@/helper/*": ["src/helper/*"],
       "@/styles/*": ["src/styles/*"]
-    },
+    }
   },
   "exclude": ["node_modules", ".next", "out"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]

@@ -1,5 +1,5 @@
 export interface FaqModel {
-    id: number;
-    question: string;
-    answer: string;
+  id: number
+  question: string
+  answer: string
 }
