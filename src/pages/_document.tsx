@@ -1,4 +1,11 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document'
+import { Fragment } from 'react'
 import { GA_TRACKING_ID } from '../../scripts/gtag'
 
 class MyDocument extends Document {
@@ -20,17 +27,20 @@ class MyDocument extends Document {
   }
 
   render() {
+    const isProduction = process.env.NODE_ENV === 'production'
     return (
       <Html>
-        <Head >
-           {/* Global Site Tag (gtag.js) - Google Analytics */}
-           <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+        <Head>
+          {isProduction && (
+            <Fragment>
+              {/* Global Site Tag (gtag.js) - Google Analytics */}
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -38,9 +48,11 @@ class MyDocument extends Document {
               page_path: window.location.pathname,
             });
           `,
-            }}
-          />
-          </Head>
+                }}
+              />
+            </Fragment>
+          )}
+        </Head>
         <body>
           <Main />
           <NextScript />
