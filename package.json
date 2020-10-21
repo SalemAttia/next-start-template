@@ -6,20 +6,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "site-map": "node scripts/generate-sitemap.js",
     "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
-    "test-all": "npm run lint && npm run type-check && npm run test"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run type-check"
-    }
+    "test-all": "npm run lint && npm run type-check && npm run test",
+    "heroku-prebuild": "npm install -g next",
+    "heroku-postbuild": "npm run build"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
