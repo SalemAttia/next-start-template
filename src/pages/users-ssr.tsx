@@ -8,7 +8,7 @@ interface UserProps {
 
 export default function User({ users }: UserProps) {
   return (
-    <div>
+    <div className="center">
       {users.map((f) => (
         <div key={f.id}>
           <ul>

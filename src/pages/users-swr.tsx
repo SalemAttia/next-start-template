@@ -12,7 +12,7 @@ export default function user() {
   ) as unknown) as { data: UserModel[] }
 
   return (
-    <div>
+    <div className="center">
       <h2>HERE</h2>
       {data ? (
         data.map((f) => (
