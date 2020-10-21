@@ -6,7 +6,7 @@ interface UserProps {
   users: UserModel[]
 }
 
-export default function User({ users }: UserProps) {
+export const User = ({ users }: UserProps): JSX.Element => {
   return (
     <div className="center">
       {users.map((f) => (
@@ -21,6 +21,7 @@ export default function User({ users }: UserProps) {
     </div>
   )
 }
+export default User
 
 export const getServerSideProps: GetServerSideProps<UserProps> = async () => {
   // call the server each request pre render and it block the page until it gets load

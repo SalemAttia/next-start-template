@@ -5,7 +5,7 @@ interface UserProps {
   users: UserModel[]
 }
 
-export default function user() {
+export const User = (): JSX.Element => {
   // loding the api after the page is loaded
   const { data } = (useSWR(
     'https://jsonplaceholder.typicode.com/users'
@@ -30,3 +30,5 @@ export default function user() {
     </div>
   )
 }
+
+export default User

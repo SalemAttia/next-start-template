@@ -6,7 +6,7 @@ interface UserProps {
   users: UserModel[]
 }
 
-export default function User({ users }: UserProps) {
+export const User = ({ users }: UserProps): JSX.Element => {
   return (
     <div className="center">
       {users.map((f) => (
@@ -21,6 +21,8 @@ export default function User({ users }: UserProps) {
     </div>
   )
 }
+
+export default User
 
 export const getStaticProps: GetStaticProps<UserProps> = async () => {
   // build time render only
