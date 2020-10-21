@@ -1,0 +1,6 @@
+Sitemap:http://localhost:3000/pages-sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*

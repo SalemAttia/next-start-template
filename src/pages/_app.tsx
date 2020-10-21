@@ -1,9 +1,11 @@
 import axios from 'axios';
 import App from 'next/app';
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SWRConfig } from 'swr';
 import * as Sentry from '@sentry/node';
+import * as gtag from '../../scripts/gtag'
+import { Router } from 'next/dist/client/router';
 
 
 if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
@@ -14,13 +16,19 @@ if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
   }
 
 export default class MyApp extends App {
-  componentDidMount() {
-    // eslint-disable-next-line no-console
-    console.log('here we go');
-  }
-
   render() {
     const { Component, pageProps } = this.props;
+
+    // google analitc configration
+    useEffect(() => {
+      const handleRouteChange = (url) => {
+        gtag.pageview(url)
+      }
+      Router.events.on('routeChangeComplete', handleRouteChange)
+      return () => {
+        Router.events.off('routeChangeComplete', handleRouteChange)
+      }
+    }, []);
 
     return (
       <>
