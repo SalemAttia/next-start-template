@@ -1,3 +1,5 @@
+import { UserModel } from '../api/User'
+
 async function fetchAPI(url: string) {
   const res = await fetch(url, {
     method: 'GET',
@@ -11,10 +13,17 @@ async function fetchAPI(url: string) {
     console.error(json.errors)
     throw new Error('Failed to fetch API')
   }
-  return json.data
+  return json
 }
 
-export async function getdata() {
-  const data = await fetchAPI('url')
+export async function getUsers() {
+  const data = await fetchAPI('https://jsonplaceholder.typicode.com/users')
+  return data
+}
+
+export async function getUser(id: number): Promise<UserModel> {
+  const data = await fetchAPI(
+    `https://jsonplaceholder.typicode.com/users/${id}`
+  )
   return data
 }
