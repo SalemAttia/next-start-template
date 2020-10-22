@@ -14,7 +14,6 @@
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest --verbose",
     "test-all": "npm run lint && npm run type-check && npm run test",
-    "prestart": "next build",
     "heroku-prebuild": "npm install -g next",
     "heroku-postbuild": "npm run build"
   },
