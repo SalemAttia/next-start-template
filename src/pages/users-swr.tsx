@@ -1,5 +1,6 @@
 import useSWR from 'swr'
 import { UserModel } from '../api/User'
+import Layout from '../components/layout'
 
 interface UserProps {
   users: UserModel[]
@@ -12,7 +13,7 @@ export const User = (): JSX.Element => {
   ) as unknown) as { data: UserModel[] }
 
   return (
-    <div className="center">
+    <Layout>
       <h2>HERE</h2>
       {data ? (
         data.map((f) => (
@@ -27,7 +28,7 @@ export const User = (): JSX.Element => {
       ) : (
         <div>loding...</div>
       )}
-    </div>
+    </Layout>
   )
 }
 

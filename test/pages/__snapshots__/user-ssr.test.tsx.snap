@@ -4,6 +4,46 @@ exports[`User ssr page matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="center"
-  />
+  >
+    <a
+      class="h-tag"
+      href="/"
+    >
+      Blog
+    </a>
+    <a
+      class="h-tag"
+      href="/users-swr"
+    >
+      Swr
+    </a>
+    <a
+      class="h-tag"
+      href="/users-sp"
+    >
+      sp
+    </a>
+    <a
+      class="h-tag"
+      href="/users-ssr"
+    >
+      ssr
+    </a>
+    .
+  </div>
+  <div
+    class="min-h-screen"
+  >
+    <main>
+      <div
+        class="center"
+      />
+    </main>
+  </div>
+  <footer
+    class="bg-accent-1 border-t border-accent-2"
+  >
+    Footer
+  </footer>
 </DocumentFragment>
 `;

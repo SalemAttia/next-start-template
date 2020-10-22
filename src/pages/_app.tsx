@@ -15,16 +15,19 @@ if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
 }
 
 const App = ({ Component, pageProps }) => {
+  const isProduction = process.env.NODE_ENV === 'production'
   // google analitc configration
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      gtag.pageview(url)
-    }
-    Router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      Router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [])
+  if (isProduction) {
+    useEffect(() => {
+      const handleRouteChange = (url) => {
+        gtag.pageview(url)
+      }
+      Router.events.on('routeChangeComplete', handleRouteChange)
+      return () => {
+        Router.events.off('routeChangeComplete', handleRouteChange)
+      }
+    }, [])
+  }
 
   return (
     <>
