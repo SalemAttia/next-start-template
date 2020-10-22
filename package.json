@@ -12,7 +12,7 @@
     "site-map": "node scripts/generate-sitemap.js",
     "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt",
     "lint": "eslint . --ext ts --ext tsx --ext js",
-    "test": "jest",
+    "test": "jest --verbose",
     "test-all": "npm run lint && npm run type-check && npm run test",
     "prestart": "next build",
     "heroku-prebuild": "npm install -g next",
@@ -37,6 +37,7 @@
     "next": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "styled-jsx": "^3.3.0",
     "swr": "^0.3.6",
     "webpack-bundle-size-analyzer": "^3.1.0"
   },
