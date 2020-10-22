@@ -8,13 +8,12 @@
 - test
 - Google analytic
 - sentry for error mentor
-- CSS module example 
+- CSS module example
 - global CSS
 - custom error page
 - custom 404 page
 - circle ci configured
-- sitemap script generator 
-
+- sitemap script generator
 
 ## How to use
 
@@ -22,7 +21,6 @@
 ## install
 npm i
 ```
-
 
 ```bash
 ## Development
@@ -53,4 +51,3 @@ npm run lint
 ## format your files
 npm run format
 ```
-
