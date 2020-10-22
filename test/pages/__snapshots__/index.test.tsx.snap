@@ -3,81 +3,107 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="container"
+    class="jsx-2250570153 container"
   >
-    <main>
+    <main
+      class="jsx-2250570153"
+    >
       <h1
-        class="title"
+        class="jsx-2250570153 title"
       >
         Welcome to 
         <a
+          class="jsx-2250570153"
           href="https://nextjs.org"
         >
           Next.js!
         </a>
       </h1>
       <p
-        class="description"
+        class="jsx-2250570153 description"
       >
         Get started by editing 
-        <code>
+        <code
+          class="jsx-2250570153"
+        >
           pages/index.tsx
         </code>
       </p>
-      <button>
+      <button
+        class="jsx-2250570153"
+      >
         Test Button
       </button>
       <div
-        class="grid"
+        class="jsx-2250570153 grid"
       >
         <a
-          class="card"
+          class="jsx-2250570153 card"
           href="https://nextjs.org/docs"
         >
-          <h3>
+          <h3
+            class="jsx-2250570153"
+          >
             Documentation →
           </h3>
-          <p>
+          <p
+            class="jsx-2250570153"
+          >
             Find in-depth information about Next.js features and API.
           </p>
         </a>
         <a
-          class="card"
+          class="jsx-2250570153 card"
           href="https://nextjs.org/learn"
         >
-          <h3>
+          <h3
+            class="jsx-2250570153"
+          >
             Learn →
           </h3>
-          <p>
+          <p
+            class="jsx-2250570153"
+          >
             Learn about Next.js in an interactive course with quizzes!
           </p>
         </a>
         <a
-          class="card"
+          class="jsx-2250570153 card"
           href="https://github.com/vercel/next.js/tree/master/examples"
         >
-          <h3>
+          <h3
+            class="jsx-2250570153"
+          >
             Examples →
           </h3>
-          <p>
+          <p
+            class="jsx-2250570153"
+          >
             Discover and deploy boilerplate example Next.js projects.
           </p>
         </a>
         <a
-          class="card"
+          class="jsx-2250570153 card"
           href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         >
-          <h3>
+          <h3
+            class="jsx-2250570153"
+          >
             Deploy →
           </h3>
-          <p>
+          <p
+            class="jsx-2250570153"
+          >
             Instantly deploy your Next.js site to a public URL with Vercel.
           </p>
         </a>
       </div>
     </main>
-    <footer>
+    <footer
+      class="jsx-2250570153"
+    >
       <a
+        class="jsx-2250570153"
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         rel="noopener noreferrer"
         target="_blank"
@@ -85,7 +111,7 @@ exports[`Home page matches snapshot 1`] = `
         Powered by 
         <img
           alt="Vercel Logo"
-          class="logo"
+          class="jsx-2250570153 logo"
           src="/vercel.svg"
         />
       </a>
