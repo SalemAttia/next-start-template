@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import { UserModel } from '../api/User'
 import Layout from '../components/layout'
 import { getUsers } from '../lib/api'
-import styles from '../styles/user.module.css';
+import styles from '../styles/user.module.css'
 
 interface UserProps {
   users: UserModel[]
