@@ -9,6 +9,9 @@ const {
   WebpackBundleSizeAnalyzerPlugin,
 } = require('webpack-bundle-size-analyzer')
 
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
+
 const {
   NEXT_PUBLIC_SENTRY_DSN: SENTRY_DSN,
   SENTRY_ORG,
@@ -28,6 +31,13 @@ const COMMIT_SHA =
 
 process.env.SENTRY_DSN = SENTRY_DSN
 const basePath = ''
+
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',
+    runtimeCaching,
+  },
+})
 
 module.exports = withSourceMaps({
   serverRuntimeConfig: {
