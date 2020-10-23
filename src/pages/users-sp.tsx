@@ -22,9 +22,7 @@ export const User = ({ users }: UserProps): JSX.Element => {
           </div>
         ))}
       </div>
-      <style jsx>
-        {styles}
-      </style>
+      <style jsx>{styles}</style>
     </Layout>
   )
 }

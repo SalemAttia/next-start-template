@@ -12,7 +12,9 @@ export default function Layout({ children }) {
         <main>{children}</main>
       </div>
       <Footer />
-    <style jsx global>{style}</style>
+      <style jsx global>
+        {style}
+      </style>
     </>
   )
 }

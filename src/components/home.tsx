@@ -58,7 +58,6 @@ export const HomeComponent = (): JSX.Element => (
       </a>
     </footer>
     <style jsx>{style}</style>
-
   </div>
 )
 
