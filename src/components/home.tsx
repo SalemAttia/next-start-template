@@ -1,5 +1,3 @@
-import style from '../styles/home.css'
-
 export const HomeComponent = (): JSX.Element => (
   <div className="container">
     <main>
