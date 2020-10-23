@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next'
 import { UserModel } from '../api/User'
 import Layout from '../components/layout'
 import { getUsers } from '../lib/api'
-import styles from '../styles/user.module.css'
 
 interface UserProps {
   users: UserModel[]
@@ -14,7 +13,7 @@ export const User = ({ users }: UserProps): JSX.Element => {
       <div className="center">
         {users.map((f) => (
           <div key={f.id}>
-            <ul className={styles.ul}>
+            <ul className="ul">
               <li>{f.name}</li>
               <li>{f.email}</li>
               <li>{f.username}</li>
@@ -22,6 +21,11 @@ export const User = ({ users }: UserProps): JSX.Element => {
           </div>
         ))}
       </div>
+      <style jsx>{`
+        .ul {
+          background-color: blueviolet;
+        }
+      `}</style>
     </Layout>
   )
 }
