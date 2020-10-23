@@ -5,6 +5,7 @@ import { SWRConfig } from 'swr'
 import * as Sentry from '@sentry/node'
 import * as gtag from '../../scripts/gtag'
 import { Router } from 'next/dist/client/router'
+import style from '../styles/index.css'
 
 if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
   Sentry.init({
@@ -43,6 +44,9 @@ const App = ({ Component, pageProps }) => {
         <div>
           <Component {...pageProps} />
         </div>
+        <style jsx global>
+          {style}
+        </style>
       </SWRConfig>
     </>
   )
